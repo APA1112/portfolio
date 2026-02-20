@@ -225,36 +225,6 @@ section {
   font-weight: 500;
 }
 
-/**Contact Section**/
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 2rem;
-  margin-top: 5rem;
-}
-.contact-container input {
-  border-radius: 3rem;
-  border: 2px solid var(--text-color);
-  padding: 2rem 8rem;
-  font-size: 3rem;
-}
-.contact-container input::placeholder {
-  font-size: 3rem;
-}
-.input {
-  position: relative;
-}
-.input i {
-  position: absolute;
-  font-size: 4rem;
-  top: 50%;
-  left: 10px;
-  transform: translate(50%, -50%);
-}
-
 /**Footer**/
 footer {
   bottom: 0;

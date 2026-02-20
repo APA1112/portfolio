@@ -1,5 +1,5 @@
 const container = document.getElementById("projects-container");
-const MIN_LOADING_TIME = 5000; // 1 segundo mínimo
+const MIN_LOADING_TIME = 1000; // 1 segundo mínimo
 
 async function loadProjects() {
   showSkeletons();
