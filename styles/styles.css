@@ -328,10 +328,10 @@ footer ul li a {
   .contact-container i {
     display: none;
   }
-  .grid{
+  .grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .experience-info img{
+  .experience-info img {
     width: 70vw;
   }
 }
@@ -339,53 +339,55 @@ footer ul li a {
   header #menu-icon {
     display: block;
   }
-  .nav-links{
+  .nav-links {
     position: absolute;
     top: 100%;
-    margin-top: 1rem;
     width: 100%;
     padding: 1rem;
     background: var(--text-color);
-    display: flex;
     flex-direction: column;
     text-align: center;
     border-radius: 3rem;
-    display: none;
-    opacity: 0.9;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
   }
-  .nav-links li{
+  .nav-links li {
     margin-top: 1.5rem;
     padding: 1rem;
   }
-  .nav-links li a{
+  .nav-links li a {
     color: var(--background-color);
     font-size: 1.2rem;
   }
-  .nav-links.active{
-    display: block;
+  .nav-links.active {
+    opacity: 0.9;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  header{
+  header {
     padding: 1rem 5rem;
     gap: 8rem;
     background: var(--text-color);
     color: var(--background-color);
   }
-  header .logo{
+  header .logo {
     font-size: 1.2rem;
     color: var(--background-color);
   }
-  .about-container img{
+  .about-container img {
     width: 80vw;
   }
-  .contact-container input{
+  .contact-container input {
     padding: 0.5rem 3rem;
     font-size: 1.5rem;
     width: 80%;
   }
-  .contact-container input::placeholder{
+  .contact-container input::placeholder {
     font-size: 1rem;
   }
-  footer ul{
+  footer ul {
     gap: 1rem;
   }
 }

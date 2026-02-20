@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Alejandro Paton</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/skeletonCard.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -26,12 +27,12 @@
         <li><a href="#contact">Contacto</a></li>
       </ul>
       <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <a href="https://github.com/APA1112" class="visit-btn">GitHub</a>
+      <a href="https://github.com/APA1112" target="_blank" class="visit-btn">GitHub</a>
     </header>
-    <!-- About section  -->
-    <section id="about" class="about">
+    <!-- Hero section  -->
+    <section id="#" class="about">
       <div class="about-container">
-        <img src="image1.jpg" alt="" />
+        <img src="images/image1.jpg" alt="" />
         <div class="info-box">
           <div class="text">
             <h3>Hola soy</h3>
@@ -39,64 +40,45 @@
             <span>Desarrollador Full Stack</span>
           </div>
           <div class="btn-group">
-            <div class="btn">
+            <a href="CurriculumAlejandroPaton.pdf" download class="btn">
               <span>Download CV</span>
-            </div>
-            <div class="btn">
+            </a>
+            <a href="#contact" class="btn">
               <span>Contactar</span>
-            </div>
+            </a>
           </div>
           <div class="socials">
-            <a href="https://github.com/APA1112"
+            <a href="https://github.com/APA1112" target="_blank"
               ><i class="fa-brands fa-github"></i
             ></a>
-            <a href="https://www.linkedin.com/in/alejandro-paton"
+            <a href="https://www.linkedin.com/in/alejandro-paton" target="_blank"
               ><i class="fa-brands fa-linkedin"></i
             ></a>
           </div>
         </div>
       </div>
     </section>
+    <!-- About section  -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="info-box">
+          <h2 class="section-title">Sobre mí</h2>
+          <p>
+            Soy un desarrollador Full Stack con experiencia en la creación de
+            aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript,
+            React, Nextjs, PostgreSQL y MySQL. Me apasiona el desarrollo de software y
+            siempre estoy buscando aprender nuevas tecnologías y mejorar mis
+            habilidades. Mi objetivo es crear aplicaciones web eficientes,
+            escalables y fáciles de usar que resuelvan problemas del mundo real.
+          </p>
+        </div>
+        <img src="images/image1.jpg" alt="" />
+      </div>
+    </section>
     <!-- Projects section  -->
     <section id="projects" class="projects">
       <h2 class="section-title">Proyectos Recientes</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="image1.jpg" alt="" />
-          <h3>Proyecto 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-            eaque?
-          </p>
-          <div class="btn-group">
-            <div class="btn">Demo</div>
-            <div class="btn">Repositorio</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="image1.jpg" alt="" />
-          <h3>Proyecto 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-            eaque?
-          </p>
-          <div class="btn-group">
-            <div class="btn">Demo</div>
-            <div class="btn">Repositorio</div>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="image1.jpg" alt="" />
-          <h3>Proyecto 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-            eaque?
-          </p>
-          <div class="btn-group">
-            <div class="btn">Demo</div>
-            <div class="btn">Repositorio</div>
-          </div>
-        </div>
+      <div class="projects-container" id="projects-container">
       </div>
     </section>
     <!-- Contact section  -->
@@ -117,8 +99,11 @@
         <li><a href="#projects">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
-      <p class="copyright">© 2026 Alejandro Patón. Todos los derechos reservados.</p>
+      <p class="copyright">
+        © 2026 Alejandro Patón. Todos los derechos reservados.
+      </p>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/project.js"></script>
   </body>
 </html>
