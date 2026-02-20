@@ -1,20 +1,3 @@
 [
-  {
-    "id": 1,
-    "title": "Portfolio Web",
-    "description": "Sitio web personal desarrollado con HTML, CSS y JS.",
-    "image": "images/portfolio.jpg",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "demo": "https://tusitio.com",
-    "repo": "https://github.com/usuario/portfolio"
-  },
-  {
-    "id": 2,
-    "title": "App de Tareas",
-    "description": "Aplicación CRUD usando JavaScript puro.",
-    "image": "images/tasks.jpg",
-    "technologies": ["JavaScript", "LocalStorage"],
-    "demo": "https://demo.com",
-    "repo": "https://github.com/usuario/app"
-  }
+
 ]

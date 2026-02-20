@@ -1,59 +1,92 @@
-/** Contact Section **/
+/* Estilos base (Móviles) */
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 2rem;
   margin-top: 5rem;
+  padding: 0 20px; /* Margen de seguridad para que no toque los bordes */
+  width: 100%;
+  box-sizing: border-box;
+}
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 1rem; /* Espacio con respecto a los h3 */
+  color: var(--text-color, #333);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Contenedor del input/textarea para controlar el ancho total */
+/* Los h3 que dicen "Tu correo" y "Tu mensaje" */
+.contact-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: -1rem; /* Reduce el hueco con el input para que se vea como etiqueta */
+  width: 100%;
+  max-width: 500px; /* Misma anchura que los inputs para que coincidan */
+  text-align: center; /* Centra el texto dentro de su contenedor */
+}
 .input {
   position: relative;
-  width: 100%;
-  max-width: 600px; /* Ajusta este valor según prefieras el ancho del form */
+  width: 100%; /* Ocupa todo el ancho disponible del padre */
+  max-width: 500px; /* Límite de ancho para pantallas grandes */
 }
 
-/* Reglas comunes para ambos campos */
-.contact-container input, 
+.contact-container input,
 .contact-container textarea {
-  width: 100%; /* Ocupan todo el ancho del contenedor .input */
-  box-sizing: border-box; /* Crucial: incluye el padding en el ancho total */
+  width: 100%;
+  box-sizing: border-box; /* Fundamental para la simetría */
   border-radius: 2rem;
   border: 2px solid var(--text-color, #333);
-  padding: 1.5rem 1.5rem 1.5rem 5rem; /* Espacio a la izquierda para el icono */
-  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 4rem;
+  font-size: 1.2rem;
   font-family: inherit;
+}
+
+/* Regla de simetría 3:1 */
+.contact-container input {
+  height: 50px; 
+}
+
+.contact-container textarea {
+  height: 150px; /* 50px * 3 */
+  resize: none;
+  overflow: auto;
   scrollbar-width: none; /* Firefox */
 }
-.contact-container input::-webkit-scrollbar{
-    display: none; /* Chrome, Safari y Opera */
+
+/* Ocultar scrollbar en Chrome/Safari */
+.contact-container textarea::-webkit-scrollbar {
+  display: none;
 }
 
-/* Altura base del input */
-.contact-container input {
-  height: 60px; /* Definimos una altura fija para el cálculo */
+/* --- Breakpoint: Pantallas mayores a 600px --- */
+@media (min-width: 600px) {
+  .contact-container {
+    padding: 0; /* Ya no necesita el padding de seguridad lateral */
+  }
+  
+  .contact-container input {
+    height: 60px; /* Un poco más grande en escritorio */
+    font-size: 1.5rem;
+  }
+
+  .contact-container textarea {
+    height: 180px; /* Mantiene la proporción 3:1 (60px * 3) */
+  }
 }
 
-/* Altura del textarea (3 veces la del input) */
-.contact-container textarea {
-  height: 180px; 
-  resize: none; /* Evita que el usuario rompa la simetría */
-}
-
-/* Ajuste del Icono */
+/* Estilo del icono */
 .input i {
   position: absolute;
-  font-size: 2rem;
-  top: 1.5rem; /* Alineado arriba para que en el textarea no flote en el medio */
   left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
   color: var(--text-color, #333);
 }
 
-/* Opcional: Centrar el icono solo en el input de una línea */
-.input input + i {
-  top: 50%;
-  transform: translateY(-50%);
+/* Ajuste del icono para el textarea (que no flote en el centro) */
+.input textarea + i {
+  top: 25px; /* Lo fijamos cerca de la primera línea de texto */
+  transform: translateY(0);
 }
