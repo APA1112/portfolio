@@ -1,3 +1,11 @@
 [
-
+  {
+    "id": 1,
+    "title": "Trello Task Manager",
+    "description": "Aplicación de gestión de tareas tipo Trello desarrollada con React",
+    "image": "images/trello-task-manager.jpg",
+    "technologies": ["React", "Node.js"],
+    "demo": "https://trello.alepaton.dev/",
+    "repo": "https://github.com/APA1112/trello-clone"
+  }
 ]
