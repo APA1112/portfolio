@@ -3,9 +3,18 @@
     "id": 1,
     "title": "Trello Task Manager",
     "description": "Aplicación de gestión de tareas tipo Trello desarrollada con React",
-    "image": "images/trello-task-manager.jpg",
+    "image": "images/trello-task-manager.png",
     "technologies": ["React", "Node.js"],
     "demo": "https://trello.alepaton.dev/",
     "repo": "https://github.com/APA1112/trello-clone"
+  },
+  {
+    "id": 2,
+    "title": "API nns",
+    "description": "API para gestionar la base de datos sobre tickets de incidencias de servicios FTTH y WIMAX",
+    "image": "images/api-nns.png",
+    "technologies": ["PHP", "Symfony", "PostgreSQL"],
+    "demo": "https://api.alepaton.dev/",
+    "repo": "https://github.com/APA1112/api-nns"
   }
 ]
