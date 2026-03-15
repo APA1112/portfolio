@@ -16,5 +16,14 @@
     "technologies": ["PHP", "Symfony", "PostgreSQL"],
     "demo": "https://api.alepaton.dev/",
     "repo": "https://github.com/APA1112/api-nns"
+  },
+  {
+    "id": 2,
+    "title": "Frontend nns",
+    "description": "WebApp para gestionar tickets de incidencias de servicios FTTH y WIMAX, los clientes y los trabajadores de cada departamento",
+    "image": "images/frontend-nns.png",
+    "technologies": ["React", "TailwindCSS"],
+    "demo": "https://crm.alepaton.dev/",
+    "repo": "https://github.com/APA1112/frontend"
   }
 ]
