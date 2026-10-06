@@ -1,18 +1,10 @@
 const container = document.getElementById("projects-container");
-const MIN_LOADING_TIME = 1000; // 1 segundo mínimo
 
 async function loadProjects() {
   showSkeletons();
 
   try {
-    // Creamos ambas promesas
-    const fetchPromise = fetch("data/projects.json");
-    const delayPromise = new Promise((resolve) =>
-      setTimeout(resolve, MIN_LOADING_TIME),
-    );
-
-    // Esperamos a que ambas terminen
-    const [response] = await Promise.all([fetchPromise, delayPromise]);
+    const response = await fetch("data/projects.json");
 
     if (!response.ok) {
       throw new Error("Error al cargar proyectos");
@@ -64,17 +56,27 @@ function showEmptyMessage() {
 function renderProjects(projects) {
   container.innerHTML = "";
 
-  projects.forEach((project) => {
-    const card = document.createElement("div");
+  projects.forEach((project, index) => {
+    const card = document.createElement("article");
     card.classList.add("project-card");
+    card.style.animationDelay = `${index * 0.1}s`;
+
+    const tags = (project.technologies || [])
+      .map((tech) => `<li class="tag">${tech}</li>`)
+      .join("");
 
     card.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" />
+      <img src="${project.image}" alt="Captura de ${project.title}" width="800" height="450" loading="lazy" />
       <h3>${project.title}</h3>
+      <ul class="tags" aria-label="Tecnologías">${tags}</ul>
       <p>${project.description}</p>
       <div class="btn-group">
-        <a href="${project.demo}" target="_blank" class="btn">Demo</a>
-        <a href="${project.repo}" target="_blank" class="btn">Repositorio</a>
+        <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+        </a>
+        <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="btn">
+          <i class="fa-brands fa-github"></i> Código
+        </a>
       </div>
     `;
 

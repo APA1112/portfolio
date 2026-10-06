@@ -4,26 +4,26 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 5rem;
   padding: 0 20px; /* Margen de seguridad para que no toque los bordes */
   width: 100%;
   box-sizing: border-box;
 }
-.section-title {
-  font-size: 3rem;
-  margin-bottom: 1rem; /* Espacio con respecto a los h3 */
-  color: var(--text-color, #333);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+
+.contact-intro {
+  max-width: 500px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: -1rem;
 }
 
-/* Los h3 que dicen "Tu correo" y "Tu mensaje" */
-.contact-container h3 {
+/* Etiquetas "Tu correo" y "Tu mensaje" */
+.contact-container label {
   font-size: 1.2rem;
-  margin-bottom: -1rem; /* Reduce el hueco con el input para que se vea como etiqueta */
+  font-weight: 500;
+  margin-bottom: -1rem; /* Reduce el hueco con el input */
   width: 100%;
   max-width: 500px; /* Misma anchura que los inputs para que coincidan */
-  text-align: center; /* Centra el texto dentro de su contenedor */
+  text-align: center;
 }
 .input {
   position: relative;
@@ -37,14 +37,24 @@
   box-sizing: border-box; /* Fundamental para la simetría */
   border-radius: 2rem;
   border: 2px solid var(--text-color, #333);
+  background: var(--card-bg);
+  color: var(--text-color);
   padding: 1rem 1rem 1rem 4rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
 /* Regla de simetría 3:1 */
 .contact-container input {
-  height: 50px; 
+  height: 50px;
 }
 
 .contact-container textarea {
@@ -64,10 +74,9 @@
   .contact-container {
     padding: 0; /* Ya no necesita el padding de seguridad lateral */
   }
-  
+
   .contact-container input {
     height: 60px; /* Un poco más grande en escritorio */
-    font-size: 1.5rem;
   }
 
   .contact-container textarea {
@@ -82,7 +91,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: var(--text-color, #333);
+  color: var(--accent-color);
 }
 
 /* Ajuste del icono para el textarea (que no flote en el centro) */

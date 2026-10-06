@@ -1,3 +1,9 @@
+emailjs.init({
+  publicKey: "IaBG5iHL97UxZ889U",
+});
+
+document.getElementById("contact").addEventListener("submit", sendMail);
+
 function sendMail(event) {
   if (event) event.preventDefault();
 
