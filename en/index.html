@@ -1,48 +1,48 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alejandro Patón | Desarrollador Full Stack</title>
+    <title>Alejandro Patón | Full Stack Developer</title>
     <meta
       name="description"
-      content="Portfolio de Alejandro Patón, desarrollador Full Stack (React, Vue, Laravel, Symfony, SQL). Proyectos, trayectoria y contacto. Disponible en remoto o en Madrid."
+      content="Portfolio of Alejandro Patón, Full Stack developer (React, Vue, Laravel, Symfony, SQL). Projects, background and contact. Open to remote work or relocation to Madrid."
     />
     <meta name="author" content="Alejandro Patón" />
     <meta name="theme-color" content="#1e0c1b" />
-    <link rel="canonical" href="https://alepaton.dev/" />
+    <link rel="canonical" href="https://alepaton.dev/en/" />
     <link rel="alternate" hreflang="es" href="https://alepaton.dev/" />
     <link rel="alternate" hreflang="en" href="https://alepaton.dev/en/" />
     <link rel="alternate" hreflang="x-default" href="https://alepaton.dev/" />
 
-    <!-- Open Graph / redes sociales -->
+    <!-- Open Graph / social -->
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:url" content="https://alepaton.dev/" />
-    <meta property="og:title" content="Alejandro Patón | Desarrollador Full Stack" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:url" content="https://alepaton.dev/en/" />
+    <meta property="og:title" content="Alejandro Patón | Full Stack Developer" />
     <meta
       property="og:description"
-      content="Proyectos con React, Vue, Laravel, Symfony y SQL. Echa un vistazo a mi trabajo y contáctame."
+      content="Projects built with React, Vue, Laravel, Symfony and SQL. Take a look at my work and get in touch."
     />
-    <meta property="og:image" content="https://alepaton.dev/images/og-image.png" />
+    <meta property="og:image" content="https://alepaton.dev/images/og-image-en.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Alejandro Patón | Desarrollador Full Stack" />
+    <meta name="twitter:title" content="Alejandro Patón | Full Stack Developer" />
     <meta
       name="twitter:description"
-      content="Proyectos con React, Vue, Laravel, Symfony y SQL."
+      content="Projects built with React, Vue, Laravel, Symfony and SQL."
     />
-    <meta name="twitter:image" content="https://alepaton.dev/images/og-image.png" />
+    <meta name="twitter:image" content="https://alepaton.dev/images/og-image-en.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Alejandro Patón Araujo",
-        "jobTitle": "Desarrollador Full Stack",
-        "url": "https://alepaton.dev/",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://alepaton.dev/en/",
         "image": "https://alepaton.dev/images/profile.webp",
         "address": {
           "@type": "PostalAddress",
@@ -60,7 +60,7 @@
       }
     </script>
 
-    <!-- Aplica el tema guardado antes de pintar para evitar parpadeo -->
+    <!-- Apply saved theme before first paint to avoid flashing -->
     <script>
       try {
         const theme = localStorage.getItem("theme");
@@ -68,7 +68,7 @@
       } catch (e) {}
     </script>
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -83,44 +83,44 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
     />
-    <!-- ?v= fuerza a Cloudflare y al navegador a pedir la versión nueva: súbelo en cada cambio de CSS/JS -->
-    <link rel="stylesheet" href="styles/styles.css?v=3" />
-    <link rel="stylesheet" href="styles/skeletonCard.css?v=2" />
-    <link rel="stylesheet" href="styles/formStyle.css?v=2" />
+    <!-- Keep ?v= in sync with the Spanish index.html -->
+    <link rel="stylesheet" href="../styles/styles.css?v=3" />
+    <link rel="stylesheet" href="../styles/skeletonCard.css?v=2" />
+    <link rel="stylesheet" href="../styles/formStyle.css?v=2" />
 
-    <script src="js/script.js?v=2" defer></script>
-    <script src="js/project.js?v=2" defer></script>
+    <script src="../js/script.js?v=2" defer></script>
+    <script src="../js/project.js?v=2" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="js/emailJs.js?v=2" defer></script>
+    <script src="../js/emailJs.js?v=2" defer></script>
   </head>
   <body>
     <!-- Navbar  -->
     <header class="header">
       <a href="#home" class="logo"><span>Alejandro Patón</span></a>
-      <nav aria-label="Principal">
+      <nav aria-label="Main">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#skills">Tecnologías</a></li>
-          <li><a href="#experience">Trayectoria</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="header-actions">
         <a
-          href="en/"
+          href="../"
           class="lang-switch"
-          hreflang="en"
-          lang="en"
-          aria-label="English version"
-          >EN</a
+          hreflang="es"
+          lang="es"
+          aria-label="Versión en español"
+          >ES</a
         >
         <button
           type="button"
           class="icon-btn"
           id="theme-toggle"
-          aria-label="Cambiar tema claro/oscuro"
+          aria-label="Toggle light/dark theme"
         >
           <i class="fa-solid fa-moon"></i>
         </button>
@@ -128,7 +128,7 @@
           type="button"
           class="icon-btn"
           id="menu-icon"
-          aria-label="Abrir menú"
+          aria-label="Open menu"
           aria-controls="nav-links"
           aria-expanded="false"
         >
@@ -149,31 +149,31 @@
       <section id="home" class="about hero">
         <div class="about-container">
           <img
-            src="images/profile.webp"
-            alt="Foto de Alejandro Patón"
+            src="../images/profile.webp"
+            alt="Photo of Alejandro Patón"
             width="600"
             height="600"
             fetchpriority="high"
           />
           <div class="info-box">
             <div class="text">
-              <h3>Hola, soy</h3>
+              <h3>Hi, I'm</h3>
               <h1>Alejandro Patón</h1>
-              <span class="role">Desarrollador Full Stack</span>
+              <span class="role">Full Stack Developer</span>
             </div>
             <p class="availability">
-              <i class="fa-solid fa-location-dot"></i> Jaén · Disponible en
-              remoto o en Madrid
+              <i class="fa-solid fa-location-dot"></i> Jaén, Spain · Open to
+              remote work or Madrid
             </p>
             <div class="btn-group">
               <a
-                href="assets/CurriculumAlejandroPaton.pdf"
+                href="../assets/CurriculumAlejandroPaton.pdf"
                 download
                 class="btn btn-primary"
               >
-                <i class="fa-solid fa-download"></i> Descargar CV
+                <i class="fa-solid fa-download"></i> Download CV (Spanish)
               </a>
-              <a href="#contact" class="btn">Contactar</a>
+              <a href="#contact" class="btn">Contact me</a>
             </div>
             <div class="socials">
               <a
@@ -197,44 +197,44 @@
 
       <!-- About section  -->
       <section id="about" class="section reveal">
-        <h2 class="section-title">Sobre mí</h2>
+        <h2 class="section-title">About me</h2>
         <div class="about-text">
           <p>
-            Soy desarrollador web titulado en
-            <strong>Desarrollo de Aplicaciones Web</strong> y con un curso de
-            especialización en <strong>Inteligencia Artificial y Big Data</strong>.
-            Durante mis prácticas en ETYH construí backends con Laravel e
-            interfaces con Vue.js e Inertia, trabajando con MySQL, SQL Server y
-            Docker.
+            I'm a web developer with a Higher Technical Degree in
+            <strong>Web Application Development</strong> and a specialization
+            course in <strong>Artificial Intelligence and Big Data</strong>.
+            During my internship at ETYH I built backends with Laravel and
+            interfaces with Vue.js and Inertia, working with MySQL, SQL Server
+            and Docker.
           </p>
           <p>
-            Hoy trabajo como técnico de soporte, resolviendo incidencias de red
-            para particulares, empresas y clientes internacionales en inglés. Esa
-            experiencia me ha enseñado a entender los problemas desde el lado del
-            usuario, algo que llevo a cada aplicación que construyo: APIs con
-            Symfony y PostgreSQL, frontends con React y apps completas con
-            Supabase.
+            Today I work as a technical support specialist, solving network
+            issues for home users, businesses and international customers in
+            English. That experience has taught me to understand problems from
+            the user's side, something I bring to every application I build:
+            APIs with Symfony and PostgreSQL, frontends with React and full apps
+            with Supabase.
           </p>
         </div>
         <ul class="facts">
           <li>
             <i class="fa-solid fa-graduation-cap"></i>
-            <span>Grado Superior DAW + Esp. IA y Big Data</span>
+            <span>Web App Development degree + AI &amp; Big Data</span>
           </li>
           <li>
             <i class="fa-solid fa-language"></i>
-            <span>Español nativo · Inglés B2 (Cambridge)</span>
+            <span>Native Spanish · English B2 (Cambridge)</span>
           </li>
           <li>
             <i class="fa-solid fa-laptop-code"></i>
-            <span>Remoto o reubicación en Madrid</span>
+            <span>Remote or relocation to Madrid</span>
           </li>
         </ul>
       </section>
 
       <!-- Skills section  -->
       <section id="skills" class="section reveal">
-        <h2 class="section-title">Tecnologías</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
           <div class="skill-group">
             <h3>Frontend</h3>
@@ -259,7 +259,7 @@
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Bases de datos</h3>
+            <h3>Databases</h3>
             <ul>
               <li><i class="devicon-mysql-plain"></i>MySQL</li>
               <li><i class="devicon-postgresql-plain"></i>PostgreSQL</li>
@@ -268,7 +268,7 @@
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Herramientas</h3>
+            <h3>Tools</h3>
             <ul>
               <li><i class="devicon-git-plain"></i>Git</li>
               <li><i class="devicon-docker-plain"></i>Docker</li>
@@ -280,42 +280,42 @@
 
       <!-- Experience section  -->
       <section id="experience" class="section reveal">
-        <h2 class="section-title">Trayectoria</h2>
+        <h2 class="section-title">Experience</h2>
         <ol class="timeline">
           <li class="timeline-item">
-            <span class="timeline-date">2025 — Actualidad</span>
-            <h3>Técnico de Soporte · Innovasur</h3>
+            <span class="timeline-date">2025 — Present</span>
+            <h3>Technical Support Specialist · Innovasur</h3>
             <p>
-              Resolución de incidencias de conectividad para particulares y
-              empresas, soporte en inglés a clientes internacionales y
-              configuración de equipos ONT de fibra.
+              Troubleshooting connectivity issues for home and business
+              customers, English-language support for international customers
+              and setup of fiber ONT devices.
             </p>
           </li>
           <li class="timeline-item">
             <span class="timeline-date">2024 — 2025</span>
-            <h3>Especialización en IA y Big Data · IES Oretania</h3>
-            <p>Curso de especialización en Inteligencia Artificial y Big Data.</p>
+            <h3>AI &amp; Big Data Specialization · IES Oretania</h3>
+            <p>Specialization course in Artificial Intelligence and Big Data.</p>
           </li>
           <li class="timeline-item">
-            <span class="timeline-date">Abr — Jun 2024</span>
-            <h3>Desarrollador Web (Prácticas) · ETYH</h3>
+            <span class="timeline-date">Apr — Jun 2024</span>
+            <h3>Web Developer (Internship) · ETYH</h3>
             <p>
-              Backends con Laravel 10, interfaces dinámicas con Vue.js e
-              Inertia.js, optimización de consultas en MySQL/SQL Server y
-              entornos de desarrollo con Docker.
+              Backends with Laravel 10, dynamic interfaces with Vue.js and
+              Inertia.js, query optimization on MySQL/SQL Server and Docker-based
+              development environments.
             </p>
           </li>
           <li class="timeline-item">
             <span class="timeline-date">2022 — 2024</span>
-            <h3>Grado Superior en DAW · IES Oretania</h3>
-            <p>Desarrollo de Aplicaciones Web.</p>
+            <h3>Higher Degree in Web App Development · IES Oretania</h3>
+            <p>Two-year vocational degree in Web Application Development (DAW).</p>
           </li>
         </ol>
       </section>
 
       <!-- Projects section  -->
       <section id="projects" class="section">
-        <h2 class="section-title">Proyectos</h2>
+        <h2 class="section-title">Projects</h2>
         <div class="projects-container" id="projects-container"></div>
       </section>
 
@@ -323,12 +323,12 @@
       <section class="section reveal">
         <form id="contact" class="contact" novalidate>
           <div class="contact-container">
-            <h2 class="section-title">Contáctame</h2>
+            <h2 class="section-title">Contact me</h2>
             <p class="contact-intro">
-              ¿Tienes una oferta, un proyecto o una pregunta? Escríbeme y te
-              responderé lo antes posible.
+              Have a job offer, a project or a question? Send me a message and
+              I'll get back to you as soon as possible.
             </p>
-            <label for="email">Tu correo</label>
+            <label for="email">Your email</label>
             <div class="input">
               <input
                 type="email"
@@ -340,17 +340,17 @@
               />
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </div>
-            <label for="message">Tu mensaje</label>
+            <label for="message">Your message</label>
             <div class="input">
               <textarea
-                placeholder="Escribe tu mensaje aquí..."
+                placeholder="Write your message here..."
                 id="message"
                 name="message"
                 required
               ></textarea>
               <i class="fa-solid fa-message" aria-hidden="true"></i>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           </div>
         </form>
       </section>
@@ -359,12 +359,12 @@
     <!-- Footer  -->
     <footer>
       <ul>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <p class="copyright">
-        © 2026 Alejandro Patón. Todos los derechos reservados.
+        © 2026 Alejandro Patón. All rights reserved.
       </p>
     </footer>
   </body>

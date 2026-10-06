@@ -4,6 +4,36 @@ emailjs.init({
 
 document.getElementById("contact").addEventListener("submit", sendMail);
 
+const mailTexts =
+  document.documentElement.lang === "en"
+    ? {
+        ok: "OK",
+        emptyTitle: "Missing fields",
+        emptyText: "Please fill in all the fields.",
+        invalidTitle: "Invalid email",
+        invalidText: "Please enter a valid email address.",
+        sendingTitle: "Sending...",
+        sendingText: "We are processing your message.",
+        sentTitle: "Sent!",
+        sentText: "Your message has been sent successfully.",
+        errorTitle: "Sending failed",
+        errorText: "We couldn't reach the server. Please try again later.",
+      }
+    : {
+        ok: "Aceptar",
+        emptyTitle: "Campos incompletos",
+        emptyText: "Por favor, completa todos los campos.",
+        invalidTitle: "Email no válido",
+        invalidText:
+          "Por favor, introduce una dirección de correo electrónica real.",
+        sendingTitle: "Enviando...",
+        sendingText: "Estamos procesando tu mensaje.",
+        sentTitle: "¡Enviado!",
+        sentText: "Tu mensaje se ha enviado correctamente.",
+        errorTitle: "Error de envío",
+        errorText: "No pudimos conectar con el servidor. Inténtalo más tarde.",
+      };
+
 function sendMail(event) {
   if (event) event.preventDefault();
 
@@ -14,12 +44,12 @@ function sendMail(event) {
   if (!emailValue || !messageValue) {
     Swal.fire({
       icon: "warning",
-      title: "Campos incompletos",
-      text: "Por favor, completa todos los campos.",
+      title: mailTexts.emptyTitle,
+      text: mailTexts.emptyText,
       color: "#1e0c1b",
       confirmButtonColor: "#1e0c1b",
-      confirmButtonText: "Aceptar",
-      confirmButtonAriaLabel: "Aceptar",
+      confirmButtonText: mailTexts.ok,
+      confirmButtonAriaLabel: mailTexts.ok,
     });
     return;
   }
@@ -29,20 +59,20 @@ function sendMail(event) {
   if (!emailRegex.test(emailValue)) {
     Swal.fire({
       icon: "error",
-      title: "Email no válido",
-      text: "Por favor, introduce una dirección de correo electrónica real.",
+      title: mailTexts.invalidTitle,
+      text: mailTexts.invalidText,
       color: "#1e0c1b",
       confirmButtonColor: "#1e0c1b",
-      confirmButtonText: "Aceptar",
-      confirmButtonAriaLabel: "Aceptar",
+      confirmButtonText: mailTexts.ok,
+      confirmButtonAriaLabel: mailTexts.ok,
     });
     return;
   }
 
   // Si pasa las validaciones, mostramos el cargando
   Swal.fire({
-    title: "Enviando...",
-    text: "Estamos procesando tu mensaje.",
+    title: mailTexts.sendingTitle,
+    text: mailTexts.sendingText,
     allowOutsideClick: false,
     didOpen: () => {
       Swal.showLoading();
@@ -59,8 +89,8 @@ function sendMail(event) {
     .then(() => {
       Swal.fire({
         icon: "success",
-        title: "¡Enviado!",
-        text: "Tu mensaje se ha enviado correctamente.",
+        title: mailTexts.sentTitle,
+        text: mailTexts.sentText,
         timer: 3000,
         showConfirmButton: false,
       });
@@ -70,8 +100,8 @@ function sendMail(event) {
       console.error("Error de EmailJS:", error);
       Swal.fire({
         icon: "error",
-        title: "Error de envío",
-        text: "No pudimos conectar con el servidor. Inténtalo más tarde.",
+        title: mailTexts.errorTitle,
+        text: mailTexts.errorText,
       });
     });
 }

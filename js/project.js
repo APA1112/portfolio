@@ -1,10 +1,30 @@
 const container = document.getElementById("projects-container");
+const isEnglish = document.documentElement.lang === "en";
+// Rutas relativas a este script para que funcionen igual desde / y desde /en/
+const scriptUrl = document.currentScript.src;
+const fromRoot = (path) => new URL(`../${path}`, scriptUrl).href;
+
+const texts = isEnglish
+  ? {
+      error: "Error loading projects.",
+      empty: "🚧 No projects published yet.",
+      screenshot: "Screenshot of",
+      technologies: "Technologies",
+      code: "Code",
+    }
+  : {
+      error: "Error cargando proyectos.",
+      empty: "🚧 Aún no hay proyectos publicados.",
+      screenshot: "Captura de",
+      technologies: "Tecnologías",
+      code: "Código",
+    };
 
 async function loadProjects() {
   showSkeletons();
 
   try {
-    const response = await fetch("data/projects.json");
+    const response = await fetch(fromRoot("data/projects.json"));
 
     if (!response.ok) {
       throw new Error("Error al cargar proyectos");
@@ -19,7 +39,7 @@ async function loadProjects() {
 
     renderProjects(projects);
   } catch (error) {
-    container.innerHTML = `<p class="empty-message">Error cargando proyectos.</p>`;
+    container.innerHTML = `<p class="empty-message">${texts.error}</p>`;
     console.error(error);
   }
 }
@@ -48,7 +68,7 @@ function showSkeletons() {
 function showEmptyMessage() {
   container.innerHTML = `
     <div class="empty-message">
-      🚧 Aún no hay proyectos publicados.
+      ${texts.empty}
     </div>
   `;
 }
@@ -61,21 +81,25 @@ function renderProjects(projects) {
     card.classList.add("project-card");
     card.style.animationDelay = `${index * 0.1}s`;
 
+    const title = (isEnglish && project.title_en) || project.title;
+    const description =
+      (isEnglish && project.description_en) || project.description;
+
     const tags = (project.technologies || [])
       .map((tech) => `<li class="tag">${tech}</li>`)
       .join("");
 
     card.innerHTML = `
-      <img src="${project.image}" alt="Captura de ${project.title}" width="800" height="450" loading="lazy" />
-      <h3>${project.title}</h3>
-      <ul class="tags" aria-label="Tecnologías">${tags}</ul>
-      <p>${project.description}</p>
+      <img src="${fromRoot(project.image)}" alt="${texts.screenshot} ${title}" width="800" height="450" loading="lazy" />
+      <h3>${title}</h3>
+      <ul class="tags" aria-label="${texts.technologies}">${tags}</ul>
+      <p>${description}</p>
       <div class="btn-group">
         <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
         </a>
         <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="btn">
-          <i class="fa-brands fa-github"></i> Código
+          <i class="fa-brands fa-github"></i> ${texts.code}
         </a>
       </div>
     `;

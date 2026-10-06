@@ -1,11 +1,14 @@
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
 const themeToggle = document.querySelector('#theme-toggle');
+const menuLabels = document.documentElement.lang === 'en'
+    ? { open: 'Open menu', close: 'Close menu' }
+    : { open: 'Abrir menú', close: 'Cerrar menú' };
 
 function setMenu(open) {
     navLinks.classList.toggle('active', open);
     menuIcon.setAttribute('aria-expanded', open);
-    menuIcon.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menuIcon.setAttribute('aria-label', open ? menuLabels.close : menuLabels.open);
     //Cambiamos el icono del menú entre 'fa-bars' y 'fa-x'
     menuIcon.querySelector('i').className = open ? 'fa-solid fa-x' : 'fa-solid fa-bars';
 }

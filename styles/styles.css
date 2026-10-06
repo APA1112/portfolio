@@ -125,8 +125,21 @@ li a:hover::before,
   cursor: pointer;
   transition: background 0.2s ease;
 }
-.icon-btn:hover {
+.icon-btn:hover,
+.lang-switch:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+.lang-switch {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--header-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
 }
 #menu-icon {
   display: none;
@@ -386,7 +399,9 @@ section {
 /**Projects**/
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Ancho fijo por tarjeta y centradas: se ve bien con 1, 2 o 20 proyectos */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+  justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
 }
@@ -425,6 +440,21 @@ section {
 }
 .project-card .btn-group {
   justify-content: flex-start;
+}
+
+/* Con un solo proyecto: tarjeta horizontal destacada (desaparece sola al añadir otro) */
+.projects-container:has(.project-card:only-child) {
+  grid-template-columns: minmax(0, 900px);
+}
+.project-card:only-child {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  column-gap: 2rem;
+  align-content: center;
+  align-items: center;
+}
+.project-card:only-child img {
+  grid-row: span 4; /* título, etiquetas, descripción y botones a la derecha */
 }
 .tags {
   display: flex;
@@ -570,6 +600,12 @@ footer ul li a {
   }
   .about-text {
     text-align: left;
+  }
+  .project-card:only-child {
+    grid-template-columns: 1fr;
+  }
+  .project-card:only-child img {
+    grid-row: auto;
   }
 }
 @media (max-width: 480px) {

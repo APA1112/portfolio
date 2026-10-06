@@ -2,7 +2,9 @@
   {
     "id": 1,
     "title": "Gestor de gastos",
+    "title_en": "Expense Tracker",
     "description": "Aplicación para gestionar los gastos e ingresos personales, llevando un registro de cada uno de ellos y mostrando estadísticas sobre los mismos",
+    "description_en": "App to track personal expenses and income, keeping a record of each one and showing statistics about them",
     "image": "images/gestor-gastos.webp",
     "technologies": ["React", "TailwindCSS", "Claude Code", "Supabase"],
     "demo": "https://gestor.alepaton.dev/",
