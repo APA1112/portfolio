@@ -127,6 +127,10 @@
 .paquete .btn {
   align-self: flex-start;
 }
+.paquete .btn-group,
+.demo-texto .btn-group {
+  justify-content: flex-start;
+}
 .btn-disabled,
 .btn-disabled:hover {
   opacity: 0.55;
@@ -196,6 +200,16 @@
 }
 .demo-texto .btn {
   align-self: flex-start;
+}
+/* Demos alternas: la segunda con la imagen a la derecha */
+.demo + .demo {
+  margin-top: 5rem;
+}
+.demo.invertida {
+  grid-template-columns: 1fr 1.3fr;
+}
+.demo.invertida .demo-img {
+  order: 2;
 }
 
 /**Cómo trabajo**/
@@ -316,9 +330,17 @@
   .servicios-hero h1 {
     font-size: 2.5rem;
   }
-  .demo {
+  .demo,
+  .demo.invertida {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  /* En móvil, siempre la imagen primero */
+  .demo.invertida .demo-img {
+    order: 0;
+  }
+  .demo + .demo {
+    margin-top: 3.5rem;
   }
   .mantenimiento {
     grid-template-columns: 1fr;

@@ -19,5 +19,15 @@
     "image": "images/demo-cafe-aurora.webp",
     "technologies": ["React", "Vite", "TailwindCSS", "Docker", "Nginx"],
     "demo": "https://cafe.alepaton.dev/"
+  },
+  {
+    "id": 3,
+    "title": "La Brasa · Carta editable para restaurantes",
+    "title_en": "La Brasa · Editable restaurant menu",
+    "description": "Web bilingüe de un asador con carta, menú del día y eventos que el propio restaurante edita en un panel (Directus). Alérgenos con filtro, QR imprimible para las mesas y despliegue con Docker en VPS propio",
+    "description_en": "Bilingual website for a grill restaurant whose menu, set lunch and events are edited by the restaurant itself in a panel (Directus). Allergen filter, printable table QR codes and Docker deployment on my own VPS",
+    "image": "images/demo-labrasa.webp",
+    "technologies": ["React", "Vite", "TailwindCSS", "Directus", "PostgreSQL", "Docker"],
+    "demo": "https://labrasa.alepaton.dev/"
   }
 ]
