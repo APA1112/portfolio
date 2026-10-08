@@ -79,9 +79,20 @@ function sendMail(event) {
     },
   });
 
+  // En /servicios/ el formulario tiene además tipo de negocio y paquete:
+  // se añaden al principio del mensaje para usar la misma plantilla de EmailJS
+  const business = document.getElementById("business");
+  const pack = document.getElementById("package");
+  const extra = [
+    business && business.value && `Negocio: ${business.value}`,
+    pack && pack.value && `Paquete: ${pack.value}`,
+  ].filter(Boolean);
+
   let params = {
     email: emailValue,
-    message: messageValue,
+    message: extra.length
+      ? `[Servicios para comercios]\n${extra.join("\n")}\n\n${messageValue}`
+      : messageValue,
   };
 
   emailjs

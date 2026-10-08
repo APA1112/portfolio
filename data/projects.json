@@ -9,5 +9,15 @@
     "technologies": ["React", "TailwindCSS", "Claude Code", "Supabase"],
     "demo": "https://gestor.alepaton.dev/",
     "repo": "https://github.com/APA1112/gestor-gastos"
+  },
+  {
+    "id": 2,
+    "title": "Café Aurora · Web para comercios",
+    "title_en": "Café Aurora · Small business website",
+    "description": "Plantilla para webs de pequeños comercios: horario con indicador de abierto/cerrado, carta, galería y mapa. SEO local con datos estructurados y 96–100 en Lighthouse",
+    "description_en": "Template for small business websites: opening hours with an open/closed indicator, menu, gallery and map. Local SEO with structured data and 96–100 Lighthouse scores",
+    "image": "images/demo-cafe-aurora.webp",
+    "technologies": ["React", "Vite", "TailwindCSS", "Docker", "Nginx"],
+    "demo": "https://cafe.alepaton.dev/"
   }
 ]

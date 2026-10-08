@@ -98,9 +98,14 @@ function renderProjects(projects) {
         <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
         </a>
-        <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="btn">
+        ${
+          // "repo" es opcional: los proyectos con repositorio privado no muestran el botón
+          project.repo
+            ? `<a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="btn">
           <i class="fa-brands fa-github"></i> ${texts.code}
-        </a>
+        </a>`
+            : ""
+        }
       </div>
     `;
 

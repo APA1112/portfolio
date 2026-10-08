@@ -53,7 +53,8 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
 //Resaltamos en el menú la sección visible
 const sectionLinks = new Map();
-navLinks.querySelectorAll('a').forEach((link) => {
+//Solo enlaces internos (#seccion): los que llevan a otra página (servicios/) romperían querySelector
+navLinks.querySelectorAll('a[href^="#"]').forEach((link) => {
     const section = document.querySelector(link.getAttribute('href'));
     if (section) sectionLinks.set(section, link);
 });

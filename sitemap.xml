@@ -13,4 +13,8 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://alepaton.dev/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://alepaton.dev/en/" />
   </url>
+  <url>
+    <loc>https://alepaton.dev/servicios/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
 </urlset>

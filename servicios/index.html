@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webs para pequeños comercios | Alejandro Patón</title>
+    <meta
+      name="description"
+      content="Webs rápidas para cafeterías, restaurantes, peluquerías y comercios de barrio. Precio cerrado, pensadas para el móvil y con mantenimiento incluido. Desde 300 €."
+    />
+    <meta name="author" content="Alejandro Patón" />
+    <meta name="theme-color" content="#1e0c1b" />
+    <link rel="canonical" href="https://alepaton.dev/servicios/" />
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://alepaton.dev/servicios/" />
+    <meta property="og:title" content="Webs para pequeños comercios | Alejandro Patón" />
+    <meta
+      property="og:description"
+      content="Tu negocio en Google y en el móvil, con precio cerrado y mantenimiento incluido. Desde 300 €."
+    />
+    <meta property="og:image" content="https://alepaton.dev/images/demo-cafe-aurora.webp" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Alejandro Patón · Webs para pequeños comercios",
+        "url": "https://alepaton.dev/servicios/",
+        "description": "Diseño, publicación y mantenimiento de webs para pequeños comercios.",
+        "areaServed": "ES",
+        "priceRange": "€€",
+        "founder": {
+          "@type": "Person",
+          "name": "Alejandro Patón Araujo",
+          "url": "https://alepaton.dev/"
+        }
+      }
+    </script>
+
+    <!-- Aplica el tema guardado antes de pintar para evitar parpadeo -->
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <!-- ?v= fuerza a Cloudflare y al navegador a pedir la versión nueva: súbelo en cada cambio de CSS/JS -->
+    <link rel="stylesheet" href="../styles/styles.css?v=3" />
+    <link rel="stylesheet" href="../styles/formStyle.css?v=2" />
+    <link rel="stylesheet" href="../styles/servicios.css?v=1" />
+
+    <script src="../js/script.js?v=3" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="../js/emailJs.js?v=3" defer></script>
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <header class="header">
+      <a href="../" class="logo"><span>Alejandro Patón</span></a>
+      <nav aria-label="Principal">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#demo">Demo</a></li>
+          <li><a href="#como-trabajo">Cómo trabajo</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button
+          type="button"
+          class="icon-btn"
+          id="theme-toggle"
+          aria-label="Cambiar tema claro/oscuro"
+        >
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button
+          type="button"
+          class="icon-btn"
+          id="menu-icon"
+          aria-label="Abrir menú"
+          aria-controls="nav-links"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="../" class="visit-btn">Portfolio</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="servicios-hero">
+        <p class="eyebrow"><i class="fa-solid fa-store"></i> Webs para pequeños comercios</p>
+        <h1>Tu negocio en Google y en el móvil, <span>sin complicaciones</span></h1>
+        <p class="lead">
+          Diseño, publico y mantengo la web de tu cafetería, restaurante, peluquería o
+          tienda de barrio. Precio cerrado, trato directo conmigo y sin sorpresas.
+        </p>
+        <div class="btn-group">
+          <a href="#paquetes" class="btn btn-primary">Ver paquetes</a>
+          <a href="#demo" class="btn"><i class="fa-solid fa-eye"></i> Ver un ejemplo</a>
+        </div>
+        <ul class="facts">
+          <li><i class="fa-solid fa-mobile-screen"></i><span>Pensadas para el móvil</span></li>
+          <li><i class="fa-solid fa-bolt"></i><span>Rápidas: cargan en 2 segundos</span></li>
+          <li><i class="fa-solid fa-shield-halved"></i><span>Alojadas en Europa (RGPD)</span></li>
+        </ul>
+      </section>
+
+      <!-- Paquetes -->
+      <section id="paquetes" class="section reveal">
+        <h2 class="section-title">Paquetes</h2>
+        <div class="paquetes">
+          <article class="paquete">
+            <h3>Presencia básica</h3>
+            <p class="precio"><span>desde</span> 300 €</p>
+            <p class="paquete-desc">Una web de una página con todo lo que tus clientes buscan.</p>
+            <ul class="lista">
+              <li>Portada, carta o servicios, horario y galería</li>
+              <li>Aviso de "Abierto ahora / Cerrado"</li>
+              <li>Botones de WhatsApp, llamar y cómo llegar</li>
+              <li>Mapa, aviso legal y privacidad</li>
+              <li>Ficha de Google Business optimizada</li>
+            </ul>
+            <p class="plazo"><i class="fa-regular fa-clock"></i> Entrega en 1–2 semanas</p>
+            <a href="https://cafe.alepaton.dev" target="_blank" rel="noopener" class="btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver demo
+            </a>
+          </article>
+
+          <article class="paquete destacado">
+            <p class="etiqueta">Más completo</p>
+            <h3>Web de negocio</h3>
+            <p class="precio"><span>desde</span> 600 €</p>
+            <p class="paquete-desc">Para negocios que cambian a menudo su carta, catálogo o promociones.</p>
+            <ul class="lista">
+              <li>Todo lo de Presencia básica</li>
+              <li>Varias secciones o páginas</li>
+              <li>Carta o catálogo que cambias tú desde un panel</li>
+              <li>Carta con código QR para las mesas</li>
+              <li>Español e inglés y SEO local</li>
+            </ul>
+            <p class="plazo"><i class="fa-regular fa-clock"></i> Entrega en 2–3 semanas</p>
+            <span class="btn btn-disabled" aria-disabled="true">Demo próximamente</span>
+          </article>
+
+          <article class="paquete">
+            <h3>Reservas y citas</h3>
+            <p class="precio"><span>desde</span> 800 €</p>
+            <p class="paquete-desc">Tus clientes reservan mesa o cita online y tú lo gestionas desde el móvil.</p>
+            <ul class="lista">
+              <li>Reservas por día y franja horaria</li>
+              <li>Panel para confirmar o cancelar</li>
+              <li>Aviso por email al cliente y a ti</li>
+              <li>Adaptable a mesas, servicios o profesionales</li>
+              <li>Se integra en tu web actual o en una nueva</li>
+            </ul>
+            <p class="plazo"><i class="fa-regular fa-clock"></i> Plazo según el proyecto</p>
+            <span class="btn btn-disabled" aria-disabled="true">Demo próximamente</span>
+          </article>
+        </div>
+
+        <div class="mantenimiento">
+          <div>
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Mantenimiento</h3>
+            <p class="precio"><span>desde</span> 30 €/mes</p>
+          </div>
+          <ul class="lista">
+            <li>Alojamiento, certificado de seguridad (HTTPS) y copias diarias</li>
+            <li>Vigilancia 24 h: si la web se cae, me entero antes que tú</li>
+            <li>Pequeños cambios cada mes: horario, precios, fotos</li>
+            <li>Soporte por email o WhatsApp</li>
+          </ul>
+        </div>
+        <p class="nota">
+          Precios orientativos. Tras hablar contigo te doy un presupuesto cerrado,
+          con el precio y el plazo por escrito.
+        </p>
+      </section>
+
+      <!-- Demo -->
+      <section id="demo" class="section reveal">
+        <h2 class="section-title">Un ejemplo real</h2>
+        <div class="demo">
+          <a href="https://cafe.alepaton.dev" target="_blank" rel="noopener" class="demo-img">
+            <img
+              src="../images/demo-cafe-aurora.webp"
+              alt="Captura de la web de demostración de Café Aurora"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+          </a>
+          <div class="demo-texto">
+            <h3>Café Aurora</h3>
+            <p>
+              Una cafetería ficticia con la web del paquete
+              <strong>Presencia básica</strong>. Ábrela desde el móvil: así la verían tus clientes.
+            </p>
+            <ul class="lista">
+              <li>Indica si está abierto en este momento</li>
+              <li>Carta con precios, galería y reseñas</li>
+              <li>WhatsApp, llamada y mapa a un toque</li>
+              <li>Puntuación de 96–100 en Google Lighthouse</li>
+            </ul>
+            <a href="https://cafe.alepaton.dev" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir la demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cómo trabajo -->
+      <section id="como-trabajo" class="section reveal">
+        <h2 class="section-title">Cómo trabajo</h2>
+        <ol class="pasos">
+          <li>
+            <span class="paso-num">1</span>
+            <h3>Hablamos</h3>
+            <p>Me cuentas tu negocio y qué necesitas. Sin compromiso y sin coste.</p>
+          </li>
+          <li>
+            <span class="paso-num">2</span>
+            <h3>Presupuesto cerrado</h3>
+            <p>Te paso por escrito qué incluye, cuánto cuesta y cuándo estará lista.</p>
+          </li>
+          <li>
+            <span class="paso-num">3</span>
+            <h3>Diseño y revisión</h3>
+            <p>Te enseño la web antes de publicarla e incluye dos rondas de cambios.</p>
+          </li>
+          <li>
+            <span class="paso-num">4</span>
+            <h3>Publicación</h3>
+            <p>La pongo en marcha con tu dominio y me encargo de que siga funcionando.</p>
+          </li>
+        </ol>
+        <div class="porque">
+          <h3>¿Por qué conmigo?</h3>
+          <ul class="facts">
+            <li><i class="fa-solid fa-user"></i><span>Hablas siempre con quien hace la web</span></li>
+            <li><i class="fa-solid fa-code"></i><span>Código a medida, sin plantillas que se rompen</span></li>
+            <li><i class="fa-solid fa-headset"></i><span>Vengo del soporte técnico: explico sin tecnicismos</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Preguntas frecuentes -->
+      <section id="preguntas" class="section reveal">
+        <h2 class="section-title">Preguntas frecuentes</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Necesito tener ya un dominio (minegocio.es)?</summary>
+            <p>
+              No. Si no lo tienes, te ayudo a registrarlo a tu nombre, para que siempre
+              sea tuyo. El coste del dominio (unos 10–15 € al año) va aparte.
+            </p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar yo los textos o los precios?</summary>
+            <p>
+              En el paquete Web de negocio, sí: tienes un panel sencillo para la carta o el
+              catálogo. En los demás, me lo pides y lo cambio dentro del mantenimiento.
+            </p>
+          </details>
+          <details>
+            <summary>¿Qué pasa si un día dejo el mantenimiento?</summary>
+            <p>
+              Te entrego todos los archivos de tu web y te explico cómo llevarla a otro
+              alojamiento. La web es tuya, sin permanencia.
+            </p>
+          </details>
+          <details>
+            <summary>¿Haces tiendas online?</summary>
+            <p>
+              Por ahora me centro en webs de presentación, cartas y reservas. Si necesitas
+              vender online, cuéntamelo y vemos la mejor opción para tu caso.
+            </p>
+          </details>
+          <details>
+            <summary>¿Trabajas solo en Jaén?</summary>
+            <p>
+              No, trabajo en remoto con negocios de toda España. Si estás cerca, también
+              podemos vernos en persona.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="section reveal">
+        <form id="contact" class="contact" novalidate>
+          <div class="contact-container">
+            <h2 class="section-title">Pide tu presupuesto</h2>
+            <p class="contact-intro">
+              Cuéntame qué negocio tienes y qué necesitas. Te respondo en menos de 24 horas.
+            </p>
+            <label for="email">Tu correo</label>
+            <div class="input">
+              <input
+                type="email"
+                placeholder="tu@negocio.com"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </div>
+            <label for="business">Tu negocio</label>
+            <div class="input">
+              <input
+                type="text"
+                placeholder="Cafetería, peluquería, taller..."
+                id="business"
+                name="business"
+                autocomplete="organization"
+              />
+              <i class="fa-solid fa-store" aria-hidden="true"></i>
+            </div>
+            <label for="package">Paquete que te interesa</label>
+            <div class="input">
+              <select id="package" name="package">
+                <option value="">Aún no lo sé</option>
+                <option>Presencia básica</option>
+                <option>Web de negocio</option>
+                <option>Reservas y citas</option>
+                <option>Solo mantenimiento de una web que ya tengo</option>
+              </select>
+              <i class="fa-solid fa-box" aria-hidden="true"></i>
+            </div>
+            <label for="message">Tu mensaje</label>
+            <div class="input">
+              <textarea
+                placeholder="¿Tienes ya web? ¿Qué te gustaría que tuviera?"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+              <i class="fa-solid fa-message" aria-hidden="true"></i>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer  -->
+    <footer>
+      <ul>
+        <li><a href="../">Portfolio</a></li>
+        <li><a href="#paquetes">Paquetes</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <p class="copyright">
+        © 2026 Alejandro Patón. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
