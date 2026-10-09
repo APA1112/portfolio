@@ -7,8 +7,7 @@
     "description_en": "App to track personal expenses and income, keeping a record of each one and showing statistics about them",
     "image": "images/gestor-gastos.webp",
     "technologies": ["React", "TailwindCSS", "Claude Code", "Supabase"],
-    "demo": "https://gestor.alepaton.dev/",
-    "repo": "https://github.com/APA1112/gestor-gastos"
+    "demo": "https://gestor.alepaton.dev/"
   },
   {
     "id": 2,
